@@ -50,11 +50,8 @@ for image in list_images:
         # 切り取った領域をグレースケールに変換
         gray = cv2.cvtColor(player_name_region, cv2.COLOR_BGR2GRAY)
 
-        # 画像の前処理（必要に応じて調整）
         # 画像の二値化
-        threshold = cv2.threshold(
-            gray, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU
-        )[1]
+        threshold = cv2.threshold(gray, 78, 255, cv2.THRESH_BINARY_INV)[1]
 
         # cv2.imwrite(f"tmp{num}.png", threshold)
 
