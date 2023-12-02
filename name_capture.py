@@ -40,7 +40,7 @@ for image in list_images:
     width = 400
     height = 24
 
-    for num in range(4):
+    for num in range(5):
         # プレイヤー名の領域を切り取る
         player_name_region = screenshot[y : y + height, x : x + width]
 
