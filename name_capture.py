@@ -26,8 +26,8 @@ if args <= 1:
 
 img_folder = sys.argv[1]
 
-TARGET_WIDTH = 1536
-TARGET_HEIGHT = 864
+TARGET_WIDTH = 1920
+TARGET_HEIGHT = 1080
 
 list_images = glob.glob(os.path.join(img_folder, "*.png"))
 for image in list_images:
@@ -35,16 +35,16 @@ for image in list_images:
     screenshot = resize_screenshot(image, TARGET_WIDTH, TARGET_HEIGHT)
 
     # プレイヤー名の表示座標
-    x = 172
-    y = 222
-    width = 400
+    x = 254
+    y = 266
+    width = 500
     height = 24
 
     for num in range(5):
         # プレイヤー名の領域を切り取る
         player_name_region = screenshot[y : y + height, x : x + width]
 
-        y += 94
+        y += 117
 
         # 切り取った領域をグレースケールに変換
         gray = cv2.cvtColor(player_name_region, cv2.COLOR_BGR2GRAY)
