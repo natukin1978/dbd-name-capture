@@ -1,7 +1,6 @@
 import sys
 import glob
 import os
-import subprocess
 import pytesseract  # OCRライブラリ
 import cv2  # OpenCVライブラリ
 
